@@ -1,28 +1,34 @@
 <main
-  class="flex flex-col items-center justify-center p-1"
+  class="flex flex-col items-center justify-center overflow-y-auto p-1"
   [attr.inert]="aiOpen() ? '' : null"
 >
-  <h3 class="text-3xl font-extrabold">This is a Header</h3>
-  <h5 class="text-xl font-bold">This is a Sub-Header</h5>
+  <h3 style="font-size: 1.875rem" class="text-3xl font-extrabold">
+    This is a Header
+  </h3>
+  <h5 style="font-size: 1.25rem" class="text-xl font-bold">
+    This is a Sub-Header
+  </h5>
 
   <!-- Adding alt text to images for screen readers -->
 
   <!-- Using semantic HTML elements -->
-  <nav aria-label="Main Navigation">
-    <ul class="flex justify-center gap-2 text-sky-500">
-      <li>
-        <a href="#home" class="hover:text-sky-700 hover:underline">Home</a>
-      </li>
-      <li>
-        <a href="#about" class="hover:text-sky-700 hover:underline">About</a>
-      </li>
-      <li>
-        <a href="#contact" class="hover:text-sky-700 hover:underline"
-          >Contact</a
-        >
-      </li>
-    </ul>
-  </nav>
+  <header>
+    <nav aria-label="Main Navigation">
+      <ul class="flex justify-center gap-2 text-sky-500">
+        <li>
+          <a href="#home" class="hover:text-sky-700 hover:underline">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="hover:text-sky-700 hover:underline">About</a>
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-sky-700 hover:underline"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Adding labels to form elements -->
   <form class="my-4 flex flex-col items-center">
@@ -32,21 +38,21 @@
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" class="rounded border p-2" />
 
-    <!-- <fieldset class="my-2 flex flex-col items-center">
-      <legend class="font-bold">Select 2 and 3:</legend>
+    <fieldset class="my-2 flex flex-col items-center">
+      <legend class="font-bold">What states start with 'W':</legend>
       <div class="flex items-center gap-1">
         <input type="checkbox" id="answer1" name="answer1" />
-        <label for="answer1">Answer 1</label>
+        <label for="answer1">Washington</label>
       </div>
       <div class="flex items-center gap-1">
         <input type="checkbox" id="answer2" name="answer2" />
-        <label for="answer2">Answer 2</label>
+        <label for="answer2">Wyoming</label>
       </div>
       <div class="flex items-center gap-1">
         <input type="checkbox" id="answer3" name="answer3" />
-        <label for="answer3">Answer 3</label>
+        <label for="answer3">California</label>
       </div>
-    </fieldset> -->
+    </fieldset>
 
     <fieldset class="my-2 flex items-center gap-4">
       <legend class="mb-2 font-bold">What states start with 'W':</legend>
@@ -161,9 +167,9 @@
   </div>
 </main>
 <footer
-  class="fixed right-0 bottom-0 left-0 flex h-12 items-center justify-start bg-sky-500 p-1 text-white"
+  class="flex h-12 w-full items-center justify-start bg-sky-500 p-1 text-white"
 >
-  <p>&copy; 2021</p>
+  <p>&copy; 2026</p>
 </footer>
 
 @if (aiOpen()) {
